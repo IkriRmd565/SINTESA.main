@@ -20,20 +20,20 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-                <a class="nav-link active" aria-current="page"   href="./index.html">Home</a>
-              </li>
-              <li class="nav-item">
-                  <a class="nav-link" href="./jurnal.html">Jurnal</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="terbaru.html">Artikel Terbaru</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="statistik.html">Statistik Jurnal</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="./about.html">About</a>
-              </li>
+              <a class="nav-link active" aria-current="page" href="./index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./jurnal.html">Cari Jurnal</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="terbaru.html">Artikel Terbaru</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="statistik.html">Statistik Jurnal</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./about.html">About</a>
+            </li>
           </ul>
         </div>
       </div>
@@ -48,33 +48,68 @@
     <!-- Daftar Artikel -->
     <div class="container">
       <div class="row">
+        <!-- Card Artikel 1 -->
         <div class="col-md-4 mb-4">
           <div class="card">
             <img src="img/article1.jpg" class="card-img-top" alt="Artikel 1">
             <div class="card-body">
               <h5 class="card-title">Judul Artikel 1</h5>
-              <p class="card-text">Deskripsi singkat artikel 1.</p>
-              <a href="#" class="btn btn-primary">Baca Selengkapnya</a>
+              <p class="card-text"><strong>Penulis:</strong> John Doe</p>
+              <p class="card-text"><strong>Abstrak:</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+              <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalArtikel1">Selengkapnya</button>
             </div>
           </div>
         </div>
+        <!-- Modal Artikel 1 -->
+        <div class="modal fade" id="modalArtikel1" tabindex="-1" aria-labelledby="modalArtikel1Label" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="modalArtikel1Label">Judul Artikel 1</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <p><strong>Penulis:</strong> John Doe</p>
+                <p><strong>Abstrak:</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum vestibulum.</p>
+                <p><strong>Publikasi:</strong> Journal of Example Studies</p>
+                <p><strong>DOI:</strong> <a href="https://doi.org/10.1234/example1" target="_blank">10.1234/example1</a></p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card Artikel 2 -->
         <div class="col-md-4 mb-4">
           <div class="card">
             <img src="img/article2.jpg" class="card-img-top" alt="Artikel 2">
             <div class="card-body">
               <h5 class="card-title">Judul Artikel 2</h5>
-              <p class="card-text">Deskripsi singkat artikel 2.</p>
-              <a href="#" class="btn btn-primary">Baca Selengkapnya</a>
+              <p class="card-text"><strong>Penulis:</strong> Jane Smith</p>
+              <p class="card-text"><strong>Abstrak:</strong> Curabitur non nulla sit amet nisl tempus convallis quis ac lectus.</p>
+              <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalArtikel2">Selengkapnya</button>
             </div>
           </div>
         </div>
-        <div class="col-md-4 mb-4">
-          <div class="card">
-            <img src="img/article3.jpg" class="card-img-top" alt="Artikel 3">
-            <div class="card-body">
-              <h5 class="card-title">Judul Artikel 3</h5>
-              <p class="card-text">Deskripsi singkat artikel 3.</p>
-              <a href="#" class="btn btn-primary">Baca Selengkapnya</a>
+        <!-- Modal Artikel 2 -->
+        <div class="modal fade" id="modalArtikel2" tabindex="-1" aria-labelledby="modalArtikel2Label" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="modalArtikel2Label">Judul Artikel 2</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <p><strong>Penulis:</strong> Jane Smith</p>
+                <p><strong>Abstrak:</strong> Curabitur non nulla sit amet nisl tempus convallis quis ac lectus.</p>
+                <p><strong>Publikasi:</strong> Example Journal</p>
+                <p><strong>DOI:</strong> <a href="https://doi.org/10.1234/example2" target="_blank">10.1234/example2</a></p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
+              </div>
             </div>
           </div>
         </div>
