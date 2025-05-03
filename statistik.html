@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Statistik Jurnal - SINTESA</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="index.html">
+          <img src="img/logo.png" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
+          SINTESA
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+                <a class="nav-link active" aria-current="page"   href="./index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="./jurnal.html">Jurnal</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="terbaru.html">Artikel Terbaru</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="statistik.html">Statistik Jurnal</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./about.html">About</a>
+              </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Header -->
+    <div class="container text-center my-5">
+      <h1>Statistik Jurnal</h1>
+      <p>Jumlah jurnal yang ter-upload per tahun.</p>
+    </div>
+
+    <!-- Diagram Batang -->
+    <div class="container">
+      <canvas id="barChart" width="400" height="200"></canvas>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-light text-center text-lg-start mt-5">
+      <div class="text-center p-3">
+        © 2025 SINTESA
+        <a class="text-dark" href="#">Privacy Policy</a>
+      </div>
+    </footer>
+
+    <script>
+      // Data dummy untuk jumlah jurnal per tahun
+      const ctx = document.getElementById('barChart').getContext('2d');
+      const barChart = new Chart(ctx, {
+        type: 'bar',
+        data: {
+          labels: ['2019', '2020', '2021', '2022', '2023', '2024'],
+          datasets: [{
+            label: 'Jumlah Jurnal',
+            data: [50, 75, 100, 125, 150, 175],
+            backgroundColor: [
+              'rgba(75, 192, 192, 0.2)',
+              'rgba(54, 162, 235, 0.2)',
+              'rgba(255, 206, 86, 0.2)',
+              'rgba(153, 102, 255, 0.2)',
+              'rgba(255, 99, 132, 0.2)',
+              'rgba(201, 203, 207, 0.2)'
+            ],
+            borderColor: [
+              'rgba(75, 192, 192, 1)',
+              'rgba(54, 162, 235, 1)',
+              'rgba(255, 206, 86, 1)',
+              'rgba(153, 102, 255, 1)',
+              'rgba(255, 99, 132, 1)',
+              'rgba(201, 203, 207, 1)'
+            ],
+            borderWidth: 1
+          }]
+        },
+        options: {
+          scales: {
+            y: {
+              beginAtZero: true
+            }
+          }
+        }
+      });
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+  </body>
+</html>
