@@ -19,9 +19,8 @@
           cards.forEach((card) => {
             const title = card.querySelector(".card-title").textContent.toLowerCase();
             const author = card.querySelector(".card-text").textContent.toLowerCase();
-            const abstract = card.querySelector(".card-text:nth-of-type(2)").textContent.toLowerCase();
     
-            if (title.includes(query) || author.includes(query) || abstract.includes(query)) {
+            if (title.includes(query) || author.includes(query)) {
               card.parentElement.style.display = "block"; // Show card
               hasResults = true;
             } else {
@@ -38,34 +37,34 @@
   <body>
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#">
-            <img src="img/logo.png" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
-            SINTESA
-          </a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page"   href="./index.html">Home</a>
-              </li>
-              <li class="nav-item">
-                  <a class="nav-link" href="./jurnal.html">Cari Jurnal</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="terbaru.html">Artikel Terbaru</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="statistik.html">Statistik Jurnal</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="./about.html">About</a>
-              </li>
-            </ul>
-          </div>
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+          <img src="img/logo.png" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
+          SINTESA
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="./index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./jurnal.html">Cari Jurnal</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="terbaru.html">Artikel Terbaru</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="statistik.html">Statistik Jurnal</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./about.html">About</a>
+            </li>
+          </ul>
         </div>
+      </div>
     </nav>
     <!-- Navbar -->
 
@@ -73,7 +72,7 @@
     <div class="container my-5">
       <h1 class="text-center mb-4">Cari Jurnal</h1>
       <form class="d-flex justify-content-center">
-        <input class="form-control w-50 me-2" type="search" placeholder="Cari jurnal berdasarkan judul, penulis, atau kata kunci" aria-label="Search">
+        <input class="form-control w-50 me-2" type="search" placeholder="Cari jurnal berdasarkan judul atau penulis" aria-label="Search">
         <button class="btn btn-success" type="submit">Cari</button>
       </form>
     </div>
@@ -81,44 +80,74 @@
 
     <!-- Jurnal Cards -->
     <div class="container my-3">
-    <p id="noResultsMessage" class="text-danger text-center" style="display: none;">Jurnal tidak ditemukan</p>
+      <p id="noResultsMessage" class="text-danger text-center" style="display: none;">Jurnal tidak ditemukan</p>
     </div>
 
-    <div class="container">
+    <div class="row d-flex align-items-stretch">
       <div class="row">
         <!-- Card 1 -->
         <div class="col-md-4 mb-4">
-          <div class="card">
-            <img src="img/jurnal1.png" class="card-img-top" alt="Jurnal 1">
+          <div class="card h-100">
             <div class="card-body">
-              <h5 class="card-title">Judul Jurnal 1</h5>
-              <p class="card-text">Penulis: John Doe</p>
-              <p class="card-text">Abstrak: Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+              <h5 class="card-title">PENGARUH CARA PENGEMASAN, JENIS BAHAN PENGEMAS, DAN LAMA PENYIMPANAN TERHADAP SIFAT KIMIA, MIKROBIOLOGI, DAN ORGANOLEPTIK SATE BANDENG (Chanos chanos)</h5>
+              <p class="card-text">Penulis: Muhammad Nur</p>
+              <p class="card-text">Terbit: 2009</p>
               <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#detailModal1">Selengkapnya</button>
             </div>
           </div>
         </div>
         <!-- Card 2 -->
         <div class="col-md-4 mb-4">
-          <div class="card">
-            <img src="img/jurnal2.png" class="card-img-top" alt="Jurnal 2">
+          <div class="card h-100">
             <div class="card-body">
-              <h5 class="card-title">Judul Jurnal 2</h5>
-              <p class="card-text">Penulis: Jane Smith</p>
-              <p class="card-text">Abstrak: Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua...</p>
+              <h5 class="card-title">PENYUSUNAN DRAFT STANDARD OPERATING PROCEDURE (SOP) PENGOLAHAN KERIPIK PISANG (STUDI KASUS DI SALAH SATU INDUSTRI RUMAH TANGGA KERIPIK PISANG BANDAR LAMPUNG)</h5>
+              <p class="card-text">Penulis: Didit Haryanto, Otik Nawansih, Fibra Nurainy</p>
+              <p class="card-text">Terbit: 2013</p>
               <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#detailModal2">Selengkapnya</button>
             </div>
           </div>
         </div>
         <!-- Card 3 -->
         <div class="col-md-4 mb-4">
-          <div class="card">
-            <img src="img/jurnal3.png" class="card-img-top" alt="Jurnal 3">
+          <div class="card h-100">
             <div class="card-body">
-              <h5 class="card-title">Judul Jurnal 3</h5>
-              <p class="card-text">Penulis: Alice Johnson</p>
-              <p class="card-text">Abstrak: Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+              <h5 class="card-title">ISOFLAVON KEDELAI DAN POTENSINYA SEBAGAI PENANGKAP RADIKAL BEBAS</h5>
+              <p class="card-text">Penulis: Sussi Astuti</p>
+              <p class="card-text">Terbit: 2008</p>
               <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#detailModal3">Selengkapnya</button>
+            </div>
+          </div>
+        </div>
+        <!-- Card 4 -->
+        <div class="col-md-4 mb-4">
+          <div class="card h-100">
+            <div class="card-body">
+              <h5 class="card-title">INTEGRASI METODE FUZZY FMEA DAN AHP DALAM ANALISIS DAN MITIGASI RISIKO RANTAI PASOK BAWANG MERAH [Integration Fuzzy FMEA and AHP Method in Risk Management of Shallot Supply Chain]</h5>
+              <p class="card-text">Penulis: Erwin Arya Winanto, Imam Santoso</p>
+              <p class="card-text">Terbit: 2017</p>
+              <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#detailModal4">Selengkapnya</button>
+            </div>
+          </div>
+        </div>
+        <!-- Card 5 -->
+        <div class="col-md-4 mb-4">
+          <div class="card h-100">
+            <div class="card-body">
+              <h5 class="card-title">SUBSTITUSI TEPUNG TEMPE JAGUNG PADA PEMBUATAN MIE BASAH [Substitution of Corn Tempe Flour on Wet Noodle]</h5>
+              <p class="card-text">Penulis: Sri Setyani, Sussi Astuti, Florentina Florentina</p>
+              <p class="card-text">Terbit: 2017</p>
+              <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#detailModal5">Selengkapnya</button>
+            </div>
+          </div>
+        </div>
+        <!-- Card 6 -->
+        <div class="col-md-4 mb-4">
+          <div class="card h-100">
+            <div class="card-body">
+              <h5 class="card-title">PENGARUH PERBANDINGAN TEPUNG TAPIOKA DAN TEPUNG JAMUR TIRAM PUTIH (Pleurotus Oestreatus) TERHADAP VOLUME PENGEMBANGAN, KADAR PROTEIN DAN ORGANOLEPTIK KERUPUK [Effect of tapioca and white oyster mushroom (Pleurotus oestreatus) flour comparison on expansion volume, protein content and sensoric characteristics of crakers]</h5>
+              <p class="card-text">Penulis: Fibra Nurainy, Ribut Sugiharto, Dewi Wulan Sari</p>
+              <p class="card-text">Terbit: 2015</p>
+              <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#detailModal6">Selengkapnya</button>
             </div>
           </div>
         </div>
@@ -132,14 +161,14 @@
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title" id="detailModal1Label">Judul Jurnal 1</h5>
+            <h5 class="modal-title" id="detailModal1Label">PENGARUH CARA PENGEMASAN, JENIS BAHAN PENGEMAS, DAN LAMA PENYIMPANAN TERHADAP SIFAT KIMIA, MIKROBIOLOGI, DAN ORGANOLEPTIK SATE BANDENG (Chanos chanos)</h5>
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body">
-            <p><strong>Penulis:</strong> John Doe</p>
-            <p><strong>Abstrak:</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.</p>
-            <p><strong>Publikasi:</strong> 2025</p>
-            <p><strong>DOI:</strong> 10.1234/example.doi</p>
+            <p><strong>Penulis:</strong> Muhammad Nur</p>
+            <p><strong>Abstrak:</strong> Sate bandeng is a perishable product which has a short shelf life time (about 3 day). It is particularly couse by the contamination of the environment. Thus, packaging is need to reduce contamination and retain destruction to prolong the storage time. This research was aimed to determine the best. Packaging technique materials and also maximum storage time so that sate bandeng has chemical, microbial, and organoleptic characteristics which is still consumtable. The result of the research shower that the vacuum packaging with polypropylene was the best treatment with maximum storage time within 6 day with 46,31% of water content; 55,53 mg/100 g of TVN content, total aerobic microbe 2,6x105colony/g, total anaerobic facultative microbe 2,1 x 104colony/g and has rather specific aroma of sate bandeng, compact and hard texture. Meanwhile the total acceptance of the product is rather liked by the panelist.</p>
+            <p><strong>Publikasi:</strong> 2009</p>
+            <p><strong>DOI:</strong> <a href="https://jurnal.fp.unila.ac.id/index.php/JTHP/article/view/49/57" target="_blank">10.23960/jtihp</a></p>
           </div>
         </div>
       </div>
@@ -149,14 +178,14 @@
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title" id="detailModal2Label">Judul Jurnal 2</h5>
+            <h5 class="modal-title" id="detailModal2Label">PENYUSUNAN DRAFT STANDARD OPERATING PROCEDURE (SOP) PENGOLAHAN KERIPIK PISANG (STUDI KASUS DI SALAH SATU INDUSTRI RUMAH TANGGA KERIPIK PISANG BANDAR LAMPUNG)</h5>
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body">
-            <p><strong>Penulis:</strong> Jane Smith</p>
-            <p><strong>Abstrak:</strong> Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-            <p><strong>Publikasi:</strong> 2024</p>
-            <p><strong>DOI:</strong> 10.5678/example.doi</p>
+            <p><strong>Penulis:</strong> Didit Haryanto, Otik Nawansih, Fibra Nurainy</p>
+            <p><strong>Abstrak:</strong> Standard operating procedure (SOP) is a procedure or steps which is standardized and must be passed to complete a particular work process. Arranging SOP draft is based on a review of Good Manufacture Practice. SOP is made for being a guide line in doing process in an industry. Purposes of this research is arranging SOP draft for home industries of banana chips making, so the product will meet the standard. In this research, drafting standard operating procedure (SOP) of the banana chips industry was begun with observating and recording every detail process. The research was conducted through four steps. Firstly, field observation to observate  process, including sanitation, tools specification, and description about step of processing banana chips. Second step was determining the critical point and optimating the condition. The next step was arranging the SOP draft. The last was the testing of SOP draft. Then the data were compared and discussed descriptively.  The result was a SOP draft which was used as in processing banana chips the products consistenly had meet the standard quality of SNI 01-4315-1996, they include moisture content, ash content, fat content, wholeness, with flavor, aroma, color, and texture.  The analysis data are, Moisture content (0,17%), ash content (1,35%), fat content (27,90%) and wholeness (88,00%). Otherwise the data analysis for banana chips that produce without SOP are, moisture content (0,15%), ash content (1,88%), fat content (39,41%) and wholeness (83,00%).</p>
+            <p><strong>Publikasi:</strong> 2013</p>
+            <p><strong>DOI:</strong> <a href="https://jurnal.fp.unila.ac.id/index.php/JTHP/article/view/185/189" target="_blank">10.23960/jtihp</a></p>
           </div>
         </div>
       </div>
@@ -166,27 +195,70 @@
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title" id="detailModal3Label">Judul Jurnal 3</h5>
+            <h5 class="modal-title" id="detailModal3Label">ISOFLAVON KEDELAI DAN POTENSINYA...</h5>
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body">
-            <p><strong>Penulis:</strong> Alice Johnson</p>
-            <p><strong>Abstrak:</strong> Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-            <p><strong>Publikasi:</strong> 2023</p>
-            <p><strong>DOI:</strong> 10.9101/example.doi</p>
+            <p><strong>Penulis:</strong> Sussi Astuti</p>
+            <p><strong>Abstrak:</strong> Improving of antioxidant status can be achieved by consuming antioxidant containing-food.  Consumption of natural food that contains antioxidant will give positive effects for health if it is consumed according to regular on optimum and effective dosage.  Isoflavones are the active compound in soybean.  By measuring immunohistochemical technique, it was proven increasing the profile of copper, zinc-superoxide dismutase (Cu,Zn-SOD) in the liver, kidney and testis of rats that were given isoflavones by oral administration.  As phenolic antioxidants, isoflavones have a potential role for protection of cells in those tissues because of the capability of isoflavone as scavenger free radicals.</p>
+            <p><strong>Publikasi:</strong> 2008</p>
+            <p><strong>DOI:</strong> <a href="https://jurnal.fp.unila.ac.id/index.php/JTHP/article/view/74/82" target="_blank">10.23960/jtihp</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Modal 4 -->
+    <div class="modal fade" id="detailModal4" tabindex="-1" aria-labelledby="detailModal4Label" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="detailModal4Label">INTEGRASI METODE FUZZY FMEA DAN AHP DALAM ANALISIS DAN MITIGASI RISIKO RANTAI PASOK BAWANG MERAH [Integration Fuzzy FMEA and AHP Method in Risk Management of Shallot Supply Chain]</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <p><strong>Penulis:</strong> Erwin Arya Winanto, Imam Santoso</p>
+            <p><strong>Abstrak:</strong> This study aimed to identify, determine and formulate the mitigation strategies of shallot supply chain risk using Fuzzy FMEA and AHP. Risk identification was performed on shallot supply chain actors include farmers (suppliers), tengkulak (distributors) and pengecer (retailers). Fuzzy FMEA was used as a tool to measure the risks identified priorities. AHP was used as a tool for determining the weighting strategies in supply chain risk mitigation strategies. Research showed that there were some risks identified on the perpetrators of the supply chain in terms of supply and demand. Risk priorities for supply chain farmers (suppliers) were risks associated with government policies that were policies related to shallot imports, the risk priority of middlemen (distributors) supply chain was risks associated with shallot imports competition, and the risk priority of retailers supply chain was a risk for competitor with other retailers. There were six alternative mitigation strategies, and the highest priority was choosing the right varieties, followed by a partnership, improve the promotion, maintain quality, maintain price stability, and maintain supplies.</p>
+            <p><strong>Publikasi:</strong> 2017</p>
+            <p><strong>DOI:</strong> <a href="https://jurnal.fp.unila.ac.id/index.php/JTHP/article/view/1375/1260" target="_blank">10.23960/jtihp</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Modal 5 -->
+    <div class="modal fade" id="detailModal5" tabindex="-1" aria-labelledby="detailModal5Label" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="detailModal5Label">SUBSTITUSI TEPUNG TEMPE JAGUNG PADA PEMBUATAN MIE BASAH [Substitution of Corn Tempe Flour on Wet Noodle]</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <p><strong>Penulis:</strong> Sri Setyani, Sussi Astuti, Florentina Florentina</p>
+            <p><strong>Abstrak:</strong> The purpose of this research was to find the best formulation of corn tempe flour and wheat flour to produce chemically, physicochemically and organoleptically acceptable sweet noodle. The formulation consisted of 4 levels ratio of 100% corn tempe flour and wheat flour L1 (10:90), L2 (20:80), L3 (30:70), L4 (40:60) w/w with 6 replications. The experiment was arranged in Complete Randomized Block Design (CRBD). Data were analyzed by using analysis of variance, further were tested by using the Least Significant Difference (LSD) test in 5% level of significance. The result showed that the best formula was L3 treatment (30% corn tempe flour  and 70% wheat flour). The characteristic  of this noodle were 23.31% moisture content, 1.55% ash, 8.50% fat,   9.11% protein, 57,2% carbohydrate, 9.85% cooking loss, and 13.50 %water absorption. The wet noodle score sensory of texture was 2,88 (rather chewy), taste’s and aroma score was 3.05 (typical corn), and the overall of acceptance was  2.93 (like).Keywords: chemical-physicochemical and organoleptic characteristics, corn tempe flour,  wet noodle,wheat. </p>
+            <p><strong>Publikasi:</strong> 2017</p>
+            <p><strong>DOI:</strong> <a href="https://jurnal.fp.unila.ac.id/index.php/JTHP/article/view/1373/1259" target="_blank">10.23960/jtihp</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Modal 6 -->
+    <div class="modal fade" id="detailModal6" tabindex="-1" aria-labelledby="detailModal6Label" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="detailModal6Label">PENGARUH PERBANDINGAN TEPUNG TAPIOKA DAN TEPUNG JAMUR TIRAM PUTIH (Pleurotus Oestreatus) TERHADAP VOLUME PENGEMBANGAN, KADAR PROTEIN DAN ORGANOLEPTIK KERUPUK [Effect of tapioca and white oyster mushroom (Pleurotus oestreatus) flour comparison on expansion volume, protein content and sensoric characteristics of crakers]</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <p><strong>Penulis:</strong> Fibra Nurainy, Ribut Sugiharto, Dewi Wulan Sari</p>
+            <p><strong>Abstrak:</strong> Oyster mushroom flour (Pleurotus oestreatus) is an alternative form of half end product from oyster mushroom, due  its durability in storage  and can be applied in varous processed food  such as cracker. This flour can be used for food crakers which contains high protein and fiber content since it contains. 17,50% of protein and 14,12% of fiber. This condition is suitable for producing crackers. The research was conducted to find out the best comparison of tapioca and oyster mushroom flour to produce the best characteristics of oyster mushroom flour crackers. The characteristics include expansion volume, sensory, and protein content. This research was designed in a Completely Randomized Block Design with 4 replication. The treatments had 6 levels comparison of tapioca and oyster mushroom flour: L1 (0%: 100%), L2 (5%: 95%), L3 (10%: 90%), L4 (15%: 85% ), L5 (20%: 80%); L6 (25%: 75%). respectively data were analiyzed with Anova to find out the treatment effects, then the data were further analyzed with Honestly Significant Difference (HSD) test on level of 5% to find the best comparison. The best comparison was L5 (20% oyster mushroom flour and 80% tapioca) which resulted crackers, with expansion volume of 272.063%, and protein content 7.636% respectively. The crackers also had a crunchy texture and rather-typical of oyster mushroom flour aroma.</p>
+            <p><strong>Publikasi:</strong> 2015</p>
+            <p><strong>DOI:</strong> <a href="https://jurnal.fp.unila.ac.id/index.php/JTHP/article/view/1401/1287" target="_blank">10.23960/jtihp</a></p>
           </div>
         </div>
       </div>
     </div>
     <!-- Detail Modals -->
-
-    <!-- disini buat fitur lainnya -->
-
-
-
-
-
-    <!-- disini buat fitur lainnya -->
 
     <!-- Footer -->
     <footer class="bg-light text-center text-lg-start">
