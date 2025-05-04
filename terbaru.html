@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>SINTESA</title>
+    <title>Artikel Terbaru - SINTESA</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
   </head>
   <body>
@@ -41,79 +41,72 @@
 
     <!-- Header -->
     <div class="container text-center my-5">
-      <h1>Artikel Terbaru</h1>
-      <p>Daftar artikel terbaru yang terindeks di Scopus.</p>
+      <h1>Jurnal Terbaru</h1>
     </div>
 
     <!-- Daftar Artikel -->
     <div class="container">
-      <div class="row">
-        <!-- Card Artikel 1 -->
-        <div class="col-md-4 mb-4">
-          <div class="card">
-            <img src="img/article1.jpg" class="card-img-top" alt="Artikel 1">
-            <div class="card-body">
-              <h5 class="card-title">Judul Artikel 1</h5>
-              <p class="card-text"><strong>Penulis:</strong> John Doe</p>
-              <p class="card-text"><strong>Abstrak:</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-              <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalArtikel1">Selengkapnya</button>
-            </div>
-          </div>
-        </div>
-        <!-- Modal Artikel 1 -->
-        <div class="modal fade" id="modalArtikel1" tabindex="-1" aria-labelledby="modalArtikel1Label" aria-hidden="true">
-          <div class="modal-dialog">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h5 class="modal-title" id="modalArtikel1Label">Judul Artikel 1</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-              </div>
-              <div class="modal-body">
-                <p><strong>Penulis:</strong> John Doe</p>
-                <p><strong>Abstrak:</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum vestibulum.</p>
-                <p><strong>Publikasi:</strong> Journal of Example Studies</p>
-                <p><strong>DOI:</strong> <a href="https://doi.org/10.1234/example1" target="_blank">10.1234/example1</a></p>
-              </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Card Artikel 2 -->
-        <div class="col-md-4 mb-4">
-          <div class="card">
-            <img src="img/article2.jpg" class="card-img-top" alt="Artikel 2">
-            <div class="card-body">
-              <h5 class="card-title">Judul Artikel 2</h5>
-              <p class="card-text"><strong>Penulis:</strong> Jane Smith</p>
-              <p class="card-text"><strong>Abstrak:</strong> Curabitur non nulla sit amet nisl tempus convallis quis ac lectus.</p>
-              <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalArtikel2">Selengkapnya</button>
-            </div>
-          </div>
-        </div>
-        <!-- Modal Artikel 2 -->
-        <div class="modal fade" id="modalArtikel2" tabindex="-1" aria-labelledby="modalArtikel2Label" aria-hidden="true">
-          <div class="modal-dialog">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h5 class="modal-title" id="modalArtikel2Label">Judul Artikel 2</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-              </div>
-              <div class="modal-body">
-                <p><strong>Penulis:</strong> Jane Smith</p>
-                <p><strong>Abstrak:</strong> Curabitur non nulla sit amet nisl tempus convallis quis ac lectus.</p>
-                <p><strong>Publikasi:</strong> Example Journal</p>
-                <p><strong>DOI:</strong> <a href="https://doi.org/10.1234/example2" target="_blank">10.1234/example2</a></p>
-              </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Judul</th>
+            <th scope="col">Penulis</th>
+            <th scope="col">Tahun Terbit</th>
+            <th scope="col">DOI</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Artikel 1 -->
+          <tr>
+            <th scope="row">1</th>
+            <td>SUBSTITUSI TEPUNG TEMPE JAGUNG PADA PEMBUATAN MIE BASAH</td>
+            <td>Sri Setyani, Sussi Astuti, Florentina Florentina</td>
+            <td>2017</td>
+            <td><a href="https://jurnal.fp.unila.ac.id/index.php/JTHP/article/view/1373/1259" target="_blank">10.23960/jtihp</a></td>
+          </tr>
+          <!-- Artikel 2 -->
+          <tr>
+            <th scope="row">2</th>
+            <td>INTEGRASI METODE FUZZY FMEA DAN AHP DALAM ANALISIS DAN MITIGASI RISIKO RANTAI PASOK BAWANG MERAH</td>
+            <td>Erwin Arya Winanto, Imam Santoso</td>
+            <td>2017</td>
+            <td><a href="https://jurnal.fp.unila.ac.id/index.php/JTHP/article/view/1375/1260" target="_blank">10.23960/jtihp</a></td>
+          </tr>
+          <!-- Artikel 3 -->
+          <tr>
+            <th scope="row">3</th>
+            <td>PENGARUH PERBANDINGAN TEPUNG TAPIOKA DAN TEPUNG JAMUR TIRAM PUTIH (Pleurotus Oestreatus) TERHADAP VOLUME PENGEMBANGAN, KADAR PROTEIN DAN ORGANOLEPTIK KERUPUK</td>
+            <td>Fibra Nurainy, Ribut Sugiharto, Dewi Wulan Sari</td>
+            <td>2015</td>
+            <td><a href="https://jurnal.fp.unila.ac.id/index.php/JTHP/article/view/1401/1287" target="_blank">10.23960/jtihp</a></td>
+          </tr>
+          <!-- Artikel 4 -->
+          <tr>
+            <th scope="row">4</th>
+            <td>PENYUSUNAN DRAFT STANDARD OPERATING PROCEDURE (SOP) PENGOLAHAN KERIPIK PISANG</td>
+            <td>Didit Haryanto, Otik Nawansih, Fibra Nurainy</td>
+            <td>2013</td>
+            <td><a href="https://jurnal.fp.unila.ac.id/index.php/JTHP/article/view/185/189" target="_blank">10.23960/jtihp</a></td>
+          </tr>
+          <!-- Artikel 5 -->
+          <tr>
+            <th scope="row">5</th>
+            <td>PENGARUH CARA PENGEMASAN, JENIS BAHAN PENGEMAS, DAN LAMA PENYIMPANAN TERHADAP SIFAT KIMIA, MIKROBIOLOGI, DAN ORGANOLEPTIK SATE BANDENG</td>
+            <td>Muhammad Nur</td>
+            <td>2009</td>
+            <td><a href="https://jurnal.fp.unila.ac.id/index.php/JTHP/article/view/49/57" target="_blank">10.23960/jtihp</a></td>
+          </tr>
+          <!-- Artikel 6 -->
+          <tr>
+            <th scope="row">6</th>
+            <td>ISOFLAVON KEDELAI DAN POTENSINYA SEBAGAI PENANGKAP RADIKAL BEBAS</td>
+            <td>Sussi Astuti</td>
+            <td>2008</td>
+            <td><a href="https://jurnal.fp.unila.ac.id/index.php/JTHP/article/view/74/82" target="_blank">10.23960/jtihp</a></td>
+          </tr>
+        </tbody>
+      </table>
     </div>
 
     <!-- Footer -->
