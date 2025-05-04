@@ -9,10 +9,11 @@
     <script>
       document.addEventListener("DOMContentLoaded", function () {
         const searchInput = document.querySelector("input[type='search']");
+        const searchButton = document.getElementById("searchButton");
         const cards = document.querySelectorAll(".card");
         const noResultsMessage = document.getElementById("noResultsMessage");
     
-        searchInput.addEventListener("input", function () {
+        function performSearch() {
           const query = searchInput.value.toLowerCase();
           let hasResults = false;
     
@@ -30,6 +31,17 @@
     
           // Show or hide the "no results" message
           noResultsMessage.style.display = hasResults ? "none" : "block";
+        }
+    
+        // Trigger search on button click
+        searchButton.addEventListener("click", performSearch);
+    
+        // Optional: Trigger search on Enter key press
+        searchInput.addEventListener("keypress", function (event) {
+          if (event.key === "Enter") {
+            event.preventDefault(); // Prevent form submission
+            performSearch();
+          }
         });
       });
     </script>
@@ -69,11 +81,11 @@
     <!-- Navbar -->
 
     <!-- Search Section -->
-    <div class="container my-5">
+        <div class="container my-5">
       <h1 class="text-center mb-4">Cari Jurnal</h1>
       <form class="d-flex justify-content-center">
         <input class="form-control w-50 me-2" type="search" placeholder="Cari jurnal berdasarkan judul atau penulis" aria-label="Search">
-        <button class="btn btn-success" type="submit">Cari</button>
+        <button class="btn btn-success" type="button" id="searchButton">Cari</button>
       </form>
     </div>
     <!-- Search Section -->
